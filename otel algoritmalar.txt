@@ -1,0 +1,367 @@
+Algoritmalar
+Yapıcı fonksiyon Otel()
+Adım 1: Başla
+Adım 2: sayac1 = 0
+Adım 3: sayac2 = 0
+Adım 4: toplam = 0
+Adım 5: OdaIsletmesi() fonksiyonunu çağır.
+Adım 6: Dur
+
+fonksiyon void OdaIsletmesi()
+Adım 1: Başla
+Adım 2: a = 1
+Adım 3: eğer a <46 ise
+Adım 3.1: odalar[a] = bos
+Adım 3.2: a = a + 1
+Adım 3.3: 3. adıma git.
+Adım 4: ekrana yaz yeni satır + tab boşluk+ tab boşluk+ "--- Otel ---" + alt satıra geç
+Adım 5: ekrana yaz tab boşluk + tab boşluk + "1. Oda Rezervasyonu" + alt satıra geç
+Adım 6: ekrana yaz tab boşluk + tab boşluk + "2. Oda Bosaltma"+ alt satıra geç
+Adım 7: ekrana yaz tab boşluk + tab boşluk + "3. Dolu Oda Sayisi" + alt satıra geç
+Adım 8: ekrana yaz tab boşluk + tab boşluk + "4. Yatak odasi Raporu" + alt satıra geç
+Adım 9: ekrana yaz tab boşluk + tab boşluk + "5. Seminer Odasi Raporu"+alt satıra geç
+Adım 10: ekrana yaz tab boşluk + tab boşluk + "6. Gunluk Toplam Gelir" + alt satıra geç
+Adım 11: ekrana yaz tab boşluk + tab boşluk + "7. Cikis yap" + alt satıra geç + alt satıra geç
+Adım 12: ekrana yaz "Seciminizin numarasini giriniz: "
+Adım 13: klavyeden oku sayi
+Adım 14: eger sayi==1 ise
+Adım 14.1: OdaRezervasyonu() fonksiyonunu çağır
+Adım 15: değilse eger sayi==2 ise
+Adım 15.1:OdaBosaltma() fonksiyonunu çağır
+Adım 16: değilse eger sayi==3 ise
+Adım 16.1: MusterilerinSayisi() fonksiyonunu çağır
+Adım 17: değilse eger sayi == 4 ise
+Adım 17.1: YatakOdasiRaporu() fonksiyonunu çağır
+Adım 18: değilse eger sayi ==5 ise 
+Adım 18.1: SeminerOdasiRaporu() fonksiyonunu çağır.
+Adım 19: değilse eger sayi == 6 ise
+Adım 19.1: Gelir() fonksiyonunu çağır
+Adım 20: değilse eger sayi == 7 ise
+Adım 20.1: programı sonlandır
+Adım 21: değilse 
+Adım 21.1: ekrana yaz alt satıra geç+ "Yanlis bir deger girdiniz. Lutfen dogru bir deger giriniz." + alt satıra geç
+Adım 22: eger sayi != 7 ise Adım 2'ye git.
+Adım 23: dur
+
+fonksiyon OdaRezervasyonu()
+Adım 1: Başla
+Adım 2: i = 1
+Adım 3: j = 6
+Adım 4: k = 16
+Adım 5: ekrana yaz alt satıra geç + tab boşluk + tab boşluk +"-Lutfen bir oda tipi seciniz -" + alt satıra geç + bir alt satıra geç
+Adım 6: ekrana yaz tab boşluk + tab boşluk + "1. 1 kisilik oda (40 TL) " + alt satıra geç
+Adım 7: ekrana yaz tab boşluk + tab boşluk + "2. 2 kisilik oda (60 TL) " + alt satıra geç
+Adım 8: ekrana yaz tab boşluk + tab boşluk + "3. Seminer odasi (300 TL)" + alt satıra geç
+Adım 9: klavyeden oku sayi
+Adım 10: eğer sayi == 1 ise
+Adım 10.1: eger j < 16 ise 
+Adım 10.1.1: eger odalar[j]!= dolu ise
+Adım 10.1.1.1: odalar[j] = dolu
+Adım 10.1.1.2: ekrana yaz "Adiniz:"
+Adım 10.1.1.3: klavyeden oku ad
+Adım 10.1.1.4: ekrana yaz "Soyadiniz:"
+Adım 10.1.1.5: klavyeden oku o_ad
+Adım 10.1.1.6: ekrana yaz "Kac gun kalacaksiniz? :"
+Adım 10.1.1.7: oku x2
+Adım 10.1.1.8: toplam = toplam + x2 * 40
+Adım 10.1.1.9: sayac2 = sayac2 + 1
+Adım 10.1.1.10: hafızada yer aç musteri_adi[j] 
+Adım 10.1.1.11: *musteri_adi[j] = ad
+Adım 10.1.1.12: hafızada yer aç soyadi[j]
+Adım 10.1.1.13: *soyadi[j] = o_ad
+
+Adım 10.1.2: j = j + 1
+Adım 10.1.3: git Adım 10.1
+Adım 10.2: eger j == 16 ise 
+Adım 10.2.1: ekrana yaz "1 kisilik odalar dolu."
+Adım 11:degilse eger sayi == 2 ise
+Adım 11.1: eger k < 46 ise
+Adım 11.1.1: eger odalar[k] != dolu
+Adım 11.1.1.1: odalar[k] = dolu
+Adım 11.1.1.2: ekrana yaz "Adiniz:"
+Adım 11.1.1.3: oku ad 
+Adım 11.1.1.4: ekrana yaz "Soyadiniz:"
+Adım 11.1.1.5: oku o_ad
+Adım 11.1.1.6: ekrana yaz "Kac gun kalacaksiniz? :"
+Adım 11.1.1.7: oku x2
+Adım 11.1.1.8: toplam = toplam + x2*60
+Adım 11.1.1.9: sayac2 = sayac2 + 1
+Adım 11.1.1.10: musteriAdi[k] bellekte yer aç
+Adım 11.1.1.11: *musteriAdi[k] = ad
+Adım 11.1.1.12: soyadi[k] bellekte yer aç
+Adım 11.1.1.13: *soyadi[k] = o_ad
+Adım 11.1.2: k = k + 1
+Adım 11.1.3: git Adım 11.1
+Adım 11.2 eger k==46 ise 
+Adım 11.2.1ekrana yaz "butun odalar dolu. " + alt satıra geç + alt satıra geç
+
+Adım 12 degilse eger sayi == 3 ise
+Adım 12.1: eger i < 6 ise	
+Adım 12.1.1: eger odalar[i] != dolu ise
+Adım 12.1.1.1: odalar[i] = dolu
+Adım 12.1.1.2: ekrana yaz "Adiniz: "
+Adım 12.1.1.3: oku ad
+Adım 12.1.1.4: ekrana yaz "Soyadiniz: "
+Adım 12.1.1.5: oku o_ad
+Adım 12.1.1.6: ekrana yaz "kac gun kalacaksiniz? :"
+Adım 12.1.1.7: oku x2
+Adım 12.1.1.8: toplam = toplam + x2 * 300
+Adım 12.1.1.9: sayac = sayac + 1
+Adım 12.1.1.10: musteriAdi[i] için bellek tahsis et
+Adım 12.1.1.11: *musteriAdi[i] = ad
+Adım 12.1.1.12: soyadi[i] icin bellek tahsis et
+Adım 12.1.1.13: *soyadi[i] = o_ad
+Adım 12.1.2: i = i + 1
+Adım 12.1.3: git Adım 12.1
+Adım 12.2:degilse eger i == 6 ise
+Adım 12.2.1:ekrana yaz "Butun seminer odaları dolu" + alt satıra geç
+		
+Adım 13 degilse
+Adım 13.1 ekrana yaz "Lutfen gecerli bir sayi giriniz."
+Adım 14: dur
+
+void OdaBosaltma() fonksiyonu
+Adım 1:başla
+Adım 2:ekrana yaz "Bosaltacaginiz oda numarasi: "
+Adım 3:oku sayi
+Adım 4:eger odalar[sayi] == dolu ise
+Adım 4.1:eger sayi > 0 && sayi < 6 ise
+Adım 4.1.1:odalar[sayi] = bos
+Adım 4.1.2:bellekten serbest bırak musteriAdi[sayi]
+Adım 4.1.3:bellekten serbest bırak soyadi[sayi]
+Adım 4.1.4:sayac1 = sayac1 - 1
+Adım 4.1.5:ekrana yaz "Oda silindi." + alt satıra geç
+Adım 4.2:degilse eger  sayi > 5 && sayi < 46
+Adım 4.2.1:odalar[sayi] = bos
+Adım 4.2.2:bellekten serbest bırak musteriAdi[sayi]
+Adım 4.2.3:bellekten serbest bırak soyadi[sayi]
+Adım 4.2.4:sayac2 = sayac2 - 1
+Adım 4.2.5:ekrana yaz "Oda silindi." + alt satıra geç
+Adım 5:degilse 		 		
+Adım 5.1:ekrana yaz "Lutfen oda numarasını dogru giriniz."
+Adım 6: Dur
+
+void MusterilerinSayisi() fonksiyonu
+Adım 1:Başla
+Adım 2:ekrana yaz "Dolu oda sayisi: " + (sayac1 + sayac2) + alt satıra geç
+Adım 3:Dur
+
+void YatakOdasiRaporu() fonksiyonu
+Adım 1: başla
+Adım 2: eger sayac2 == 0 ise
+	Adım 2.1: ekrana yaz "butun odalar bos" + alt satıra geç
+Adım 3: degilse
+	Adım 3.1: ekrana yaz "Oda Numarasi  Musteri Adi Musteri Soyadi     " + bir alt satıra geç
+	Adım 3.2: ekrana yaz "============================================================="
+	Adım 3.3: i = 6
+	Adım 3.4: eger i < 46 ise
+		Adım 3.4.1: eger odalar[i] == dolu ise 
+			Adım 3.4.1.1: ekrana yaz i + tab bosluk + tab bosluk + *musteriAdi[i] + tab bosluk + tab bosluk + soyadi[i] + alt satıra geç
+		Adım 3.4.2: i = i + 1
+Adım 4: dur
+
+void SeminerOdasiRaporu() fonksiyonu
+
+Adım 1: başla
+Adım 2: eger sayac1 != 6 ise
+Adım 2.1: ekrana yaz "Seminer odaları dolu" + satır sonu
+Adım 2.2: ct = 1
+Adım 2.3: eger ct < 6 ise
+Adım 2.3.1: eger odalar[ct] == dolu ise
+Adım 2.3.1.1: ekrana yaz "Oda numarasi:" + ct + satır sonu
+Adım 2.3.2: ct = ct + 1
+Adım 2.3.3: git Adım 2.3
+Adım 3: degilse
+Adım 3.1: ekrana yaz "butun seminer odaları bos." + satır sonu
+Adım 4: dur
+
+
+void gelir() fonksiyonu
+Adım 1: basla
+Adım 2: ekrana yaz "Gelir: " + toplam + yeni satır
+Adım 3: dur
+
+
+main() fonksiyonu
+Adım 1: basla
+Adım 2: Otel sınıfından bir nesne olustur
+Adım 3: dur
+
+
+pseudo code lar
+
+Yapıcı fonksiyon Otel()
+
+sayac1 =0
+sayac2 = 0
+toplam = 0
+call OdaIsletmesi()
+	
+		Fonksiyon void OdaIsletmesi()
+FOR a=1 a < 46 a = a + 1
+	 odalar[a] = bos
+DO
+	DISPLAY (NEWLINE) + (TAB SPACE) + "--- Otel ---" + (NEWLINE)
+	DISPLAY (TAB SPACE) + (TAB SPACE) + "1. Oda Rezervasyonu" + (NEWLINE)
+	DISPLAY (TAB SPACE) + (TAB SPACE) + "2. Oda Bosaltma" + (NEWLINE)
+	DISPLAY (TAB SPACE) + (TAB SPACE) + "3. Dolu Oda Sayisi" + (NEWLINE)
+	DISPLAY (TAB SPACE) + (TAB SPACE) + "4. Yatak Odasi Raporu" + (NEWLINE)
+	DISPLAY (TAB SPACE) + (TAB SPACE) + "5. Seminer Odasi Raporu" + (NEWLINE)
+	DISPLAY (TAB SPACE) + (TAB SPACE) + "6. Gunluk Toplam Gelir" + (NEWLINE)
+	DISPLAY (TAB SPACE) + (TAB SPACE) + "7. Cikis" + (NEWLINE) + (NEWLINE)
+	DISPLAY "Seciminizin numarasini giriniz:"
+	GET sayi
+	IF sayi == 1 THEN
+		CALL OdaRezervasyonu()
+	ELSE IF sayi == 2  THEN
+		CALL OdaBosaltma()
+	ELSE IF sayi == 3 THEN
+		CALL MusterilerinSayisi()
+	ELSE IF sayi == 4 THEN
+		CALL YatakOdasiRaporu()
+	ELSE IF sayi == 5 THEN
+		SeminerOdasiRaporu()
+	ELSE IF sayi == 6 THEN
+		CALL Gelir()
+	ELSE IF sayi == 7 THEN
+		EXIT
+	ELSE
+		DISPLAY (NEWLINE) + "Yanlis bir deger girdiniz. Lutfen dogru bir deger giriniz." + (NEWLINE)
+WHILE(sayi != 7)
+		fonksiyon void OdaRezervasyonu()
+i = 1
+j = 6
+k = 16
+DISPLAY	(NEWLINE) + (TAB SPACE) + (TAB SPACE) + "Lutfen bir oda tipi seciniz." + (NEWLINE) + (NEWLINE)
+DISPLAY (TAB SPACE) + (TAB SPACE) + "1. 1 Kisilik Oda (40 TL)" + (NEWLINE)
+DISPLAY (TAB SPACE) + (TAB SPACE) + "2. 2 Kisilik Oda (60 TL)" + (NEWLINE)
+DISPLAY (TAB SPACE) + (TAB SPACE) + "3. Seminer odasi (300 TL)" + (NEWLINE)
+GET sayi
+IF sayi == 1 THEN
+	WHILE j < 16
+		IF odalar[j] != dolu THEN
+			odalar[j] = dolu
+			DISPLAY "Adiniz:"
+			GET ad
+			DISPLAY "Soyadiniz:"
+			GET o_ad
+			DISPLAY "Kac gun kalacaksiniz? :"
+			GET x2
+			toplam = toplam + x2 * 40
+			sayac2 = sayac2 + 1
+			ALLOCATE musteriAdi[j]
+			*musteriAdi[j] = ad
+			ALLOCATE soyadi[j]
+			*soyadi[j] = o_ad
+			BREAK
+		j = j + 1 
+	IF j == 16 THEN
+		DISPLAY "1 kisilik odalar dolu."
+ELSE IF sayi == 2 THEN
+	WHILE k < 46
+		IF odalar[k] != dolu THEN
+			odalar[k] = dolu
+			DISPLAY "Adiniz:"
+			GET ad
+			DISPLAY "Soyadiniz:"
+			GET o_ad
+			DISPLAY "Kac gun kalacaksiniz? :"
+			GET x2
+			toplam = toplam + x2 * 60
+			sayac2 = sayac2 + 1
+			ALLOCATE musteriAdi[k]
+			*musteriAdi[k] = ad
+			ALLOCATE soyadi[k]
+			*soyadi[k] = o_ad
+			BREAK
+		k = k + 1
+	IF k == 46 THEN
+		DISPLAY "butun odalar dolu." + (NEWLINE) + (NEWLINE)
+		
+
+ELSE IF sayi == 3 THEN
+	WHILE i < 6 THEN
+		IF odalar[i] != dolu THEN
+			odalar[i] = dolu
+			DISPLAY "Adiniz:"
+			GET ad
+			DISPLAY "Soyadiniz:"
+			GET o_ad
+			DISPLAY "kac gun kalacaksiniz? :"
+			GET x2
+			toplam = toplam + x2 * 300
+			sayac1 = sayac1 + 1
+			ALLOCATE musteriAdi[i]
+			*musteriAdi[i] = ad
+			ALLOCATE soyadi[i]
+			*soyadi[i] = o_ad
+			BREAK
+		i = i + 1
+	IF i == 6 THEN
+		DISPLAY "Butun seminer odalari dolu" + (NEWLINE)
+
+ELSE
+	DISPLAY "Lutfen gecerli bir sayi giriniz."
+
+				void OdaBosaltma() fonksiyonu
+DISPLAY "Bosaltacaginiz oda numarasi: "
+GET sayi
+IF odalar[sayi] == dolu THEN
+	IF sayi>0 && sayi < 6 THEN
+		odalar[sayi] = bos
+		DEALLOCATE musteriAdi[sayi]
+		DEALLOCATE soyadi[sayi]
+		sayac1 = sayac1 - 1
+		DISPLAY "Oda silindi." + (NEWLINE)
+	ELSE IF sayi > 5 && sayi < 46
+		odalar[sayi] = bos
+		DEALLOCATE musteriAdi[sayi]
+		DEALLOCATE soyadi[sayi]
+		sayac2 = sayac2 - 1
+		DISPLAY "Oda silindi." + (NEWLINE)
+			
+
+				void MusterilerinSayisi() fonksiyonu
+
+DISPLAY "Dolu oda sayisi: " + (sayac1 + sayac2) + (NEWLINE)
+
+				void YatakOdasiRaporu() fonksiyonu
+IF sayac2 == 0 THEN
+	DISPLAY "Butun odalar bos."
+ELSE
+	DISPLAY "Oda Numarasi   Musteri Adi   Musteri Soyadi  " + (NEWLINE)
+	DISPLAY "======================================" + (NEWLINE)
+	i = 6
+	WHILE i < 46
+		IF odalar[i] == dolu THEN
+			DISPLAY i + (TAB SPACE) + (TAB SPACE) + *musteriAdi[i] + (TAB BOSLUK) + (TAB BOSLUK) + *soyadi[i] + (NEWLINE)
+		i = i + 1
+				void SeminerOdasiRaporu() fonksiyonu
+WHILE sayac1 != 6
+	DISPLAY "Seminer odalari dolu." + (NEWLINE)
+	ct = 1
+	WHILE ct < 6
+		IF odalar[ct] == dolu THEN
+			DISPLAY "Oda numarasi" + ct + (NEWLINE)
+		ct = ct + 1
+				void Gelir() fonksiyonu
+DISPLAY "Gelir:" + toplam + (NEWLINE)
+
+				main() fonksiyonu
+DECLARE Otel class object obj
+
+
+
+	
+
+
+	
+			
+		
+	
+
+	
+
+
+
+
